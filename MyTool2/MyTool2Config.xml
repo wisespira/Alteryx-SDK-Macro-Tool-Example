@@ -1,0 +1,30 @@
+    <AlteryxJavaScriptPlugin>
+	<EngineSettings EngineDll="Macro" EngineDllEntryPoint="MyTool2\Supporting_Macros\MyTool2Macro.yxmc" SDKVersion="10.1"/>
+ 	<GuiSettings Html="MyTool2Gui.html" Icon="MyTool2Icon.png" SDKVersion="10.1">
+	    <InputConnections>
+			<Connection Name="Input" AllowMultiple="False" Optional="True" Type="Connection" Label="I"/>
+		</InputConnections>
+		<OutputConnections>
+			<Connection Name="Output" AllowMultiple="False" Optional="True" 
+			Type="Connection" Label="O" />
+		</OutputConnections>
+	</GuiSettings>
+	
+	<Properties>
+    <MetaInfo>
+      <NameIsFileName value="True"/>
+      <Name>MyTool2</Name>
+      <Description/>
+      <RootToolName>MyTool2</RootToolName>
+      <ToolVersion>1</ToolVersion>
+      <ToolInDB value="false"/>
+      <CategoryName>Preparation</CategoryName>
+      <SearchTags/>
+      <Author>ira</Author>
+      <Company>ira</Company>
+      <Copyright/>
+      <DescriptionLink actual="" display=""/>
+    </MetaInfo>
+	</Properties>
+</AlteryxJavaScriptPlugin>
+  

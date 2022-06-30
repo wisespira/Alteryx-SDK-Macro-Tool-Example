@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Tool</title>
+
+  <!-- Includes the GUI library, which gives you access to the interface elements used in Designer -->
+  <script type="text/javascript">
+     document.write('<link rel="import" href="' + window.Alteryx.LibDir + '2/lib/includes.html">');
+  </script>
+
+  <!-- Applies styles to the interface elements you create -->
+  <style type="text/css">
+    body {
+        margin: 15px;
+      }
+      #helloCheckBox{
+        padding-top: 20px;
+        font-family: "Segoe UI";
+      }
+      h1{
+        text-align: center;
+        margin: 0 0 0 0;
+        padding: 0;
+      }
+  </style>
+
+</head>
+<body>
+  <h1>Check this out!</h1>
+  <!-- Creates a check box with an Id so it can be referenced in later code and a label that displays to the user -->
+  <div id="FirstTextBox">	
+	<h2>XMSG("Enter something")</h2>
+    <!--<ayx data-ui-props='{type:"TextBox", widgetId:"FirstTextBox"}' data-item-props='{dataName: "FirstTextBox", dataType: "SimpleString"}'}'></ayx>-->
+	<ayx data-ui-props='{type:"TextBox", widgetId:"FirstTextBox"}'></axy>
+  </div>
+  <script type="text/javascript">
+    //
+    window.Alteryx.Gui.BeforeLoad = function(manager, AlteryxDataItems, json){
+
+      /* Creates a new data item that holds the information from the UI element,
+      in this case the check box value.*/
+		var textBoxDataItem = new AlteryxDataItems.SimpleString('FirstTextBox')
+        manager.addDataItem(textBoxDataItem)
+        // Bind to TextBox widget
+        manager.bindDataItemToWidget(textBoxDataItem, 'FirstTextBox')
+    }
+
+	  
+    window.Alteryx.Gui.AfterLoad = function(manager,AlteryxDataItems){
+     // var textBoxDataItem = manager.getDataItem('FirstTextBox')
+
+     // document.getElementById('FirstTextBox').value = textBoxDataItem.getValue()
+	 // alert(textBoxDataItem.getValue())
+    }
+
+    window.Alteryx.Gui.Annotation = function(manager){
+      var textBoxDataItem = manager.getDataItem('FirstTextBox')
+      return textBoxDataItem.getValue()
+    }
+  </script>
+</body>
+</html>

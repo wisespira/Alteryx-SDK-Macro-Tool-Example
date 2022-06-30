@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AlteryxJavaScriptPlugin>
+  <Properties>
+    <MetaInfo>
+      <Name>MyTool2</Name>
+      <Description/>
+      <ToolVersion>1</ToolVersion>
+      <CategoryName/>
+      <Author>ira</Author>
+      <Icon>MyTool2Icon.png</Icon>
+    </MetaInfo>
+  </Properties>
+</AlteryxJavaScriptPlugin>
